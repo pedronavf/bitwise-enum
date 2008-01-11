@@ -1,0 +1,7 @@
+#summary People that participated giving their feedback
+
+= Thanks! =
+
+  * Fernando Cacciola
+  * James Kanze
+  * Soledad Alborno
