@@ -20,10 +20,11 @@ bitwise_enums:	A type-safe 1-file library for doing bitwise operations.
 #ifndef BITWISE_ENUMS_H
 #define BITWISE_ENUMS_H
 
+
 template <class Enum>
 class bitwise_enum
 {
-	int _value;
+	unsigned long int _value;
 public:
 	typedef unsigned int Bits;
 	
@@ -47,7 +48,7 @@ public:
 	}
 
 
-	int value() const
+	unsigned long int value() const
 	{
 		return _value;
 	}
@@ -65,28 +66,15 @@ public:
 	}
 
 	// OPERATIONS with integrals:
-	bitwise_enum<Enum>& operator >>= (Bits bits)
+
+	unsigned long int operator >> (Bits bits) const
 	{
-		_value >>= bits;
-		return *this;
+		return _value >> bits;
 	}
 
-	bitwise_enum<Enum>& operator <<= (Bits bits)
+	unsigned long int operator << (Bits bits) const
 	{
-		_value <<= bits;
-		return *this;
-	}
-
-	bitwise_enum<Enum> operator >> (Bits bits) const
-	{
-		bitwise_enum<Enum> ret(*this);
-		return (ret >>= bits);
-	}
-
-	bitwise_enum<Enum> operator << (Bits bits) const
-	{
-		bitwise_enum<Enum> ret(*this);
-		return (ret <<= bits);
+		return _value << bits;
 	}
 
 	// OPERATIONS BETWEEN bitwise_enums:
