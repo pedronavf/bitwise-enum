@@ -1,3 +1,9 @@
+Version 1.1
+===========
+    * underlying type changed to unsigned long, thanks to James Kanze.
+    * >>= and <<= operators removed since they could be used to 'cheat' the masks.
+
+
 Version 1.0
 ===========
     * First release.

@@ -23,7 +23,7 @@ using std::cout;
 
 #include "bitwise_enums.hpp"
 
-enum TestEnum
+enum MasksSet1
 {
 	kZero	= 0,
 	kOne	= 1,
@@ -32,10 +32,9 @@ enum TestEnum
 	kFour	= 8
 };
 
+typedef bitwise_enum<MasksSet1> M1;
 
-typedef bitwise_enum<TestEnum> B_enum;
-
-void show_bits(B_enum b)
+void show_bits(M1 b)
 {
 	if (b.has_bits(kZero))  cout << "kZero  turned on\n";
 	if (b.has_bits(kOne))   cout << "kOne   turned on\n";
