@@ -125,6 +125,11 @@ public:
 		return _value == other._value;
 	}
 
+	bool operator != (const bitwise_enum<Enum>& other) const
+	{
+		return ! operator==(other);
+	}
+
 	// utilities
 	bool has_bits() const
 	{
@@ -134,7 +139,21 @@ public:
 	bool has_bits(const bitwise_enum<Enum>& other) const
 	{
 		return (operator&(other)).has_bits();
-	}	
+	}
+
+	size_t bits_count() const
+	{
+		unsigned long int v(_value);
+		size_t result(0);
+
+		while( v>0 )
+		{
+			result++;
+			v &= v - 1;
+		}
+
+		return result;
+	}
 };
 
 
