@@ -14,7 +14,12 @@ bitwise_enums:	A type-safe 1-file library for doing bitwise operations.
 
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    
+
+    ===============================================================
+    NOTE: THIS SOFTWARE IS OBSOLETE AND NO LONGER MAINTAINED, SINCE
+    IT IS NOW PART OF THE MiLi Minimalistic Library. PLEASE VISIT
+    MiLi's Home Page at mili.googlecode.com
+    ================================================================
 */
 
 #ifndef BITWISE_ENUMS_H
